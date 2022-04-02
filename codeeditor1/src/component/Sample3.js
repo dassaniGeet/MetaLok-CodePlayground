@@ -11,229 +11,182 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 // import Grid from '@mui/material/Grid';
+import { useNavigate } from "react-router-dom";
+import TableComponent from './TableComponent'
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
 }));
 
+function Sample3() {
 
-function Sample3 () {
+    const Company = (a) => {
+        const navigate = useNavigate();
+        if (a === 5) {
+            navigate('/')
+        }
+    }
+    let a = 1;
     return (
         <Container>
             <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={{xs:3}} columns={{xs:3}}
-                direction="row"
-                justifyContent="center"
-                alignItems="center">
+                <Grid container spacing={{ xs: 3 }} columns={{ xs: 3 }}
+                    direction="row"
+                    justifyContent="center"
+                    alignItems="center">
                     <Grid item>
                         <Item>
-                                <div style={{  width: 150}}>
-                                            {Array.from(Array(3)).map((_, index) => (
-                                                <Row>
-                                                    <Col className="box box 23" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        1
-                                                    </Col>
-                                                    <Col className="box" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        2
-                                                    </Col>
-                                                    <Col className="box" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        3
-                                                    </Col>
-                                                    
-                                                </Row>
-                                            ))}
-                                        </div>
+                            <div style={{ width: 150 }}>
+                                {Array.from(Array(3)).map((_, r_index) => (
+                                    <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
+                                            <Col className="box box 23" style={{            //1-9
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                
+                                                <TableComponent a={a} />
+                                                {a=a+1}
+
+                                            </Col>))}
+                                    </Row>
+                                ))}
+                            </div>
                         </Item>
                         <Item>
-                        <div style={{  width: 150}}>
-                                            {Array.from(Array(3)).map((_, index) => (
-                                                <Row>
-                                                    <Col className="box box 23" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        1
-                                                    </Col>
-                                                    <Col className="box" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        2
-                                                    </Col>
-                                                    <Col className="box" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        3
-                                                    </Col>
-                                                    
-                                                </Row>
-                                            ))}
-                                        </div>
+                            <div style={{ width: 150 }}>
+                                {Array.from(Array(3)).map((_, r_index) => (
+                                    <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
+                                            <Col className="box box 23" style={{            //10-18
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
+                                    </Row>
+                                ))}
+                            </div>
                         </Item>
                         <Item>
-                        <div style={{  width: 150}}>
-                                    {Array.from(Array(3)).map((_, index) => (
-                                        <Row>
-                                            <Col className="box box 23" style={{
+                            <div style={{ width: 150 }}>
+                                {Array.from(Array(3)).map((_, r_index) => (
+                                    <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
+                                            <Col className="box box 23" style={{            //19-27
                                                 backgroundColor: 'Black',
                                             }}>
-                                                1
-                                            </Col>
-                                            <Col className="box" style={{
-                                                backgroundColor: 'Black',
-                                            }}>
-                                                2
-                                            </Col>
-                                            <Col className="box" style={{
-                                                backgroundColor: 'Black',
-                                            }}>
-                                                3
-                                            </Col>
-                                            
-                                        </Row>
-                                    ))}
-                                </div>
-                        </Item>
-                    </Grid>
-                    <Grid item> 
-                        <Item>
-                                <div style={{  width: 150}}>
-                                    {Array.from(Array(3)).map((_, index) => (
-                                        <Row>
-                                            <Col className="box box 23" style={{
-                                                backgroundColor: 'Black',
-                                            }}>
-                                                1
-                                            </Col>
-                                            <Col className="box" style={{
-                                                backgroundColor: 'Black',
-                                            }}>
-                                                2
-                                            </Col>
-                                            <Col className="box" style={{
-                                                backgroundColor: 'Black',
-                                            }}>
-                                                3
-                                            </Col>
-                                            
-                                        </Row>
-                                    ))}
-                                </div>
-                        </Item>
-                        <Item>
-                        <Iframe url="https://www.youtube.com/embed/ZVOGPvo08zM"
-                            width="200px"
-                            height="200px"
-                            id="myId"
-                            className="myClassname"
-                            display="initial"
-                            position="relative" />
-                        </Item>
-                        <Item>
-                        <div style={{  width: 150}}>
-                                            {Array.from(Array(3)).map((_, index) => (
-                                                <Row>
-                                                    <Col className="box box 23" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        1
-                                                    </Col>
-                                                    <Col className="box" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        2
-                                                    </Col>
-                                                    <Col className="box" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        3
-                                                    </Col>
-                                                    
-                                                </Row>
-                                            ))}
-                                        </div>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
+                                    </Row>
+                                ))}
+                            </div>
                         </Item>
                     </Grid>
                     <Grid item>
                         <Item>
-                        <div style={{  width: 150}}>
-                                    {Array.from(Array(3)).map((_, index) => (
-                                        <Row>
-                                            <Col className="box box 23" style={{
+                            <div style={{ width: 150 }}>
+                                {Array.from(Array(3)).map((_, r_index) => (
+                                    <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
+                                            <Col className="box box 23" style={{            //28-36
                                                 backgroundColor: 'Black',
                                             }}>
-                                                1
-                                            </Col>
-                                            <Col className="box" style={{
-                                                backgroundColor: 'Black',
-                                            }}>
-                                                2
-                                            </Col>
-                                            <Col className="box" style={{
-                                                backgroundColor: 'Black',
-                                            }}>
-                                                3
-                                            </Col>
-                                            
-                                        </Row>
-                                    ))}
-                                </div>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
+                                    </Row>
+                                ))}
+                            </div>
                         </Item>
                         <Item>
-                        <div style={{  width: 150}}>
-                                            {Array.from(Array(3)).map((_, index) => (
-                                                <Row>
-                                                    <Col className="box box 23" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        1
-                                                    </Col>
-                                                    <Col className="box" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        2
-                                                    </Col>
-                                                    <Col className="box" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        3
-                                                    </Col>
-                                                    
-                                                </Row>
-                                            ))}
-                                        </div>
+                            <Iframe url="https://www.youtube.com/embed/ZVOGPvo08zM"
+                                width="200px"
+                                height="200px"
+                                id="myId"
+                                className="myClassname"
+                                display="initial"
+                                position="relative" />
                         </Item>
                         <Item>
-                                <div style={{  width: 150}}>
-                                            {Array.from(Array(3)).map((_, index) => (
-                                                <Row>
-                                                    <Col className="box box 23" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        1
-                                                    </Col>
-                                                    <Col className="box" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        2
-                                                    </Col>
-                                                    <Col className="box" style={{
-                                                        backgroundColor: 'Black',
-                                                    }}>
-                                                        3
-                                                    </Col>
-                                                    
-                                                </Row>
-                                            ))}
-                                        </div>
+                            <div style={{ width: 150 }}>
+                                {Array.from(Array(3)).map((_, r_index) => (
+                                    <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
+                                            <Col className="box box 23" style={{            //37-45
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
+                                    </Row>
+                                ))}
+                            </div>
+                        </Item>
+                    </Grid>
+                    <Grid item>
+                        <Item>
+                            <div style={{ width: 150 }}>
+                                {Array.from(Array(3)).map((_, r_index) => (
+                                    <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
+                                            <Col className="box box 23" style={{            //46-54
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
+                                    </Row>
+                                ))}
+                            </div>
+                        </Item>
+                        <Item>
+                            <div style={{ width: 150 }}>
+                                {Array.from(Array(3)).map((_, r_index) => (
+                                    <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
+                                            <Col className="box box 23" style={{            //55-63
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
+                                    </Row>
+                                ))}
+                            </div>
+                        </Item>
+                        <Item>
+                            <div style={{ width: 150 }}>
+                                {Array.from(Array(3)).map((_, r_index) => (
+                                    <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
+                                            <Col className="box box 23" style={{            //64-72
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
+                                    </Row>
+                                ))}
+                            </div>
                         </Item>
                     </Grid>
                 </Grid>
