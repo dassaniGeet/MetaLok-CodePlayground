@@ -1,5 +1,5 @@
 {
-  "name": "codeeditor1",
+  "name": "advertdev",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +15,8 @@
     "react-dom": "^18.0.0",
     "react-iframe": "^1.8.0",
     "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yarn-install": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
