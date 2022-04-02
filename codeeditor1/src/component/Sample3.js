@@ -24,6 +24,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function Sample3() {
 
+
     const Company = (a) => {
         const navigate = useNavigate();
         if (a === 5) {
@@ -52,6 +53,7 @@ function Sample3() {
                                                 {a=a+1}
 
                                             </Col>))}
+
                                     </Row>
                                 ))}
                             </div>
@@ -137,6 +139,32 @@ function Sample3() {
                         </Item>
                     </Grid>
                     <Grid item>
+                    <Item>
+                            <div style={{ width: 150,
+                                          padding: 0,
+                                          spacing: 12,}} >
+                                {Array.from(Array(3)).map((_, index) => (
+                                    <Row>
+                                        <Col className="boxCorner" style={{
+                                            backgroundColor: 'Black',
+                                        }}>
+                                            1
+                                        </Col>
+                                        <Col className="boxCorner" style={{
+                                            backgroundColor: 'Black',
+                                        }}>
+                                            2
+                                        </Col>
+                                        <Col className="boxCorner" style={{
+                                            backgroundColor: 'Black',
+                                        }}>
+                                            3
+                                        </Col>
+
+                                    </Row>
+                                ))}
+                            </div>
+                        </Item>
                         <Item>
                             <div style={{ width: 150 }}>
                                 {Array.from(Array(3)).map((_, r_index) => (
