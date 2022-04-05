@@ -22,8 +22,14 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 
-function Sample3() {
-    let a=1;
+
+    const Company = (a) => {
+        const navigate = useNavigate();
+        if (a === 5) {
+            navigate('/')
+        }
+    }
+    let a = 1;
     return (
         <Container>
             <br/>
@@ -45,22 +51,21 @@ function Sample3() {
                     direction="row"
                     justifyContent="center"
                     alignItems="center">
-                    <Grid item colSpacing={{ xs: 1 }}
-                        justifyContent="space-evenly" >
+                    <Grid item>
                         <Item>
-                            <div style={{ width: 150,
-                                          padding: 0,
-                                          spacing: 12,}} >
+                            <div style={{ width: 150 }}>
                                 {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
                                         {Array.from(Array(3)).map((_, c_index) => (
-                                        <Col className="boxCorner" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            <TableComponent a={a} />
+                                            <Col className="box box 23" style={{            //1-9
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                
+                                                <TableComponent a={a} />
                                                 {a=a+1}
-                                        </Col>
-                                        ))}
+
+                                            </Col>))}
+
                                     </Row>
                                 ))}
                             </div>
@@ -70,45 +75,31 @@ function Sample3() {
                                 {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
                                         {Array.from(Array(3)).map((_, c_index) => (
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            <TableComponent a={a} />
-                                                {a=a+1}
-                                        </Col>
-                                        ))}
+                                            <Col className="box box 23" style={{            //10-18
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
                                     </Row>
                                 ))}
                             </div>
                         </Item>
                         <Item>
-                        <div style={{ width: 150 }}>
+                            <div style={{ width: 150 }}>
                                 {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
                                         {Array.from(Array(3)).map((_, c_index) => (
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            <TableComponent a={a} />
-                                                {a=a+1}
-                                        </Col>
-                                        ))}
-                                    </Row>
-                                ))}
-                            </div>
-                        </Item>
-                        <Item>
-                        <div style={{ width: 150 }}>
-                                {Array.from(Array(3)).map((_, r_index) => (
-                                    <Row>
-                                        {Array.from(Array(3)).map((_, c_index) => (
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            <TableComponent a={a} />
-                                                {a=a+1}
-                                        </Col>
-                                        ))}
+                                            <Col className="box box 23" style={{            //19-27
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
                                     </Row>
                                 ))}
                             </div>
@@ -116,43 +107,44 @@ function Sample3() {
                     </Grid>
                     <Grid item>
                         <Item>
-                            <div style={{ width: 500, justifyContent:'center', alignItems:'center', alignContent:'center',alignSelf:'center' }}>
+                            <div style={{ width: 150 }}>
                                 {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
-                                        {Array.from(Array(9)).map((_, c_index) => (
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            <TableComponent a={a} />
-                                                {a=a+1}
-                                        </Col>
-                                        ))}
+                                        {Array.from(Array(3)).map((_, c_index) => (
+                                            <Col className="box box 23" style={{            //28-36
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
                                     </Row>
                                 ))}
                             </div>
-
                         </Item>
                         <Item>
                             <Iframe url="https://www.youtube.com/embed/ZVOGPvo08zM"
-                                width="500vw"
-                                height="300remw"
+                                width="200px"
+                                height="200px"
                                 id="myId"
                                 className="myClassname"
                                 display="initial"
                                 position="relative" />
                         </Item>
                         <Item>
-                            <div >
+                            <div style={{ width: 150 }}>
                                 {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
-                                        {Array.from(Array(9)).map((_, c_index) => (
-                                       <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            <TableComponent a={a} />
-                                                {a=a+1}
-                                        </Col>
-                                        ))}
+                                        {Array.from(Array(3)).map((_, c_index) => (
+                                            <Col className="box box 23" style={{            //37-45
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
                                     </Row>
                                 ))}
                             </div>
@@ -182,45 +174,48 @@ function Sample3() {
                                 {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
                                         {Array.from(Array(3)).map((_, c_index) => (
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            <TableComponent a={a} />
-                                                {a=a+1}
-                                        </Col>
-                                        ))}
+                                            <Col className="box box 23" style={{            //46-54
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
                                     </Row>
                                 ))}
                             </div>
                         </Item>
                         <Item>
-                        <div style={{ width: 150 }}>
+                            <div style={{ width: 150 }}>
                                 {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
                                         {Array.from(Array(3)).map((_, c_index) => (
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            <TableComponent a={a} />
-                                                {a=a+1}
-                                        </Col>
-                                        ))}
+                                            <Col className="box box 23" style={{            //55-63
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
                                     </Row>
                                 ))}
                             </div>
                         </Item>
                         <Item>
-                        <div style={{ width: 150 }}>
+                            <div style={{ width: 150 }}>
                                 {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
                                         {Array.from(Array(3)).map((_, c_index) => (
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            <TableComponent a={a} />
-                                                {a=a+1}
-                                        </Col>
-                                        ))}
+                                            <Col className="box box 23" style={{            //64-72
+                                                backgroundColor: 'Black',
+                                            }}>
+                                                <p>
+                                                    {a}
+                                                </p>
+                                                {a = a + 1}
+                                            </Col>))}
                                     </Row>
                                 ))}
                             </div>
