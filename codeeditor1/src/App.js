@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import BasicGrid from './component/TestFile1';
 import Grid1 from './component/TestFile2';
-import Sample3 from './component/Sample3'
-
+import Sample6 from './component/Sample6'
+import Countdown from "./Countdown"
 
 function App() {
   return (
@@ -11,7 +11,8 @@ function App() {
     <div className="App">
         {/* <BasicGrid/> */}
         {/* <Grid1/> */}
-        <Sample3/>
+        {/* <Countdown/> */}
+        <Sample6/>
     </div>
   );
 }

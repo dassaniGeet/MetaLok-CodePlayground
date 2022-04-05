@@ -7,16 +7,16 @@ import '../pages/style.css'
 import Iframe from 'react-iframe'
 
 function TableComponent(props) {
-    
-    
 
-    if(props.a===5) // Image exist
+
+    // props.a = props.a + 1;
+    if (props.a === 5) // Image exist
     {
         return (
             <div>
-                
+
                 <p>
-                    <a href='https://www.pornhub.com'>Hi</a> 
+                    <a href='https://www.pornhub.com'>Hi</a>
                 </p>
 
 
@@ -25,10 +25,40 @@ function TableComponent(props) {
 
         );
     }
-    else{ //Text Exist
+    else if (props.a === 69) // Image exist
+    {
         return (
             <div>
-                
+
+                <p>
+                    <a href='https://www.pornhub.com'>Hello</a>
+                </p>
+
+
+
+            </div>
+
+        );
+    }
+    else if (props.a === 113) // Image exist
+    {
+        return (
+            <div>
+
+                <p>
+                    <a href='https://www.pornhub.com'>Bye</a>
+                </p>
+
+
+
+            </div>
+
+        );
+    }
+    else { //Text Exist
+        return (
+            <div>
+
                 <p>
                     {props.a}
                 </p>
@@ -38,7 +68,7 @@ function TableComponent(props) {
             </div>
         )
     }
-    
+
 }
 
 export default TableComponent;
