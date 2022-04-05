@@ -10,6 +10,7 @@ import { Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
+import TableComponent from './TableComponent'
 // import Grid from '@mui/material/Grid';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -22,109 +23,92 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 function Sample3() {
+    let a=1;
     return (
         <Container>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+
             <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={{ xs: 3 }} columns={{ xs: 3 }}
+                <Grid container spacing={{ xs: 0 }} columns={{ xs: 3 }}
                     direction="row"
                     justifyContent="center"
                     alignItems="center">
-                    <Grid item colSpacing={{ xs: 3 }}
+                    <Grid item colSpacing={{ xs: 1 }}
                         justifyContent="space-evenly" >
                         <Item>
                             <div style={{ width: 150,
                                           padding: 0,
                                           spacing: 12,}} >
-                                {Array.from(Array(3)).map((_, index) => (
+                                {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
                                         <Col className="boxCorner" style={{
                                             backgroundColor: 'Black',
                                         }}>
-                                            1
+                                            <TableComponent a={a} />
+                                                {a=a+1}
                                         </Col>
-                                        <Col className="boxCorner" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            2
-                                        </Col>
-                                        <Col className="boxCorner" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            3
-                                        </Col>
-
+                                        ))}
                                     </Row>
                                 ))}
                             </div>
                         </Item>
                         <Item>
                             <div style={{ width: 150 }}>
-                                {Array.from(Array(3)).map((_, index) => (
+                                {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
                                         <Col className="boxVerticals" style={{
                                             backgroundColor: 'Black',
                                         }}>
-                                            1
+                                            <TableComponent a={a} />
+                                                {a=a+1}
                                         </Col>
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            2
-                                        </Col>
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            3
-                                        </Col>
-
+                                        ))}
                                     </Row>
                                 ))}
                             </div>
                         </Item>
                         <Item>
-                            <div style={{ width: 150 }}>
-                                {Array.from(Array(3)).map((_, index) => (
+                        <div style={{ width: 150 }}>
+                                {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
                                         <Col className="boxVerticals" style={{
                                             backgroundColor: 'Black',
                                         }}>
-                                            1
+                                            <TableComponent a={a} />
+                                                {a=a+1}
                                         </Col>
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            2
-                                        </Col>
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            3
-                                        </Col>
-
+                                        ))}
                                     </Row>
                                 ))}
                             </div>
                         </Item>
                         <Item>
-                            <div style={{ width: 150 }}>
-                                {Array.from(Array(3)).map((_, index) => (
+                        <div style={{ width: 150 }}>
+                                {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
-                                        <Col className="boxCorner" style={{
+                                        {Array.from(Array(3)).map((_, c_index) => (
+                                        <Col className="boxVerticals" style={{
                                             backgroundColor: 'Black',
                                         }}>
-                                            1
+                                            <TableComponent a={a} />
+                                                {a=a+1}
                                         </Col>
-                                        <Col className="boxCorner" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            2
-                                        </Col>
-                                        <Col className="boxCorner" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            3
-                                        </Col>
-
+                                        ))}
                                     </Row>
                                 ))}
                             </div>
@@ -133,54 +117,16 @@ function Sample3() {
                     <Grid item>
                         <Item>
                             <div style={{ width: 500, justifyContent:'center', alignItems:'center', alignContent:'center',alignSelf:'center' }}>
-                                {Array.from(Array(3)).map((_, index) => (
+                                {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
+                                        {Array.from(Array(9)).map((_, c_index) => (
                                         <Col className="box" style={{
                                             backgroundColor: 'Black',
                                         }}>
-                                            1
+                                            <TableComponent a={a} />
+                                                {a=a+1}
                                         </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            2
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            3
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            4
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            5
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            6
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            7
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            8
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            9
-                                        </Col>
-
+                                        ))}
                                     </Row>
                                 ))}
                             </div>
@@ -197,54 +143,16 @@ function Sample3() {
                         </Item>
                         <Item>
                             <div >
-                                {Array.from(Array(3)).map((_, index) => (
+                                {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
+                                        {Array.from(Array(9)).map((_, c_index) => (
                                        <Col className="box" style={{
                                             backgroundColor: 'Black',
                                         }}>
-                                            1
+                                            <TableComponent a={a} />
+                                                {a=a+1}
                                         </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            2
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            3
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            4
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            5
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            6
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            7
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            8
-                                        </Col>
-                                        <Col className="box" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            9
-                                        </Col>
-
+                                        ))}
                                     </Row>
                                 ))}
                             </div>
@@ -255,96 +163,64 @@ function Sample3() {
                             <div style={{ width: 150,
                                           padding: 0,
                                           spacing: 12,}} >
-                                {Array.from(Array(3)).map((_, index) => (
+                                {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
                                         <Col className="boxCorner" style={{
                                             backgroundColor: 'Black',
                                         }}>
-                                            1
+                                            <TableComponent a={a} />
+                                                {a=a+1}
                                         </Col>
-                                        <Col className="boxCorner" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            2
-                                        </Col>
-                                        <Col className="boxCorner" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            3
-                                        </Col>
-
+                                        ))}
                                     </Row>
                                 ))}
                             </div>
                         </Item>
                         <Item>
                             <div style={{ width: 150 }}>
-                                {Array.from(Array(3)).map((_, index) => (
+                                {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
                                         <Col className="boxVerticals" style={{
                                             backgroundColor: 'Black',
                                         }}>
-                                            1
+                                            <TableComponent a={a} />
+                                                {a=a+1}
                                         </Col>
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            2
-                                        </Col>
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            3
-                                        </Col>
-
+                                        ))}
                                     </Row>
                                 ))}
                             </div>
                         </Item>
                         <Item>
-                            <div style={{ width: 150 }}>
-                                {Array.from(Array(3)).map((_, index) => (
+                        <div style={{ width: 150 }}>
+                                {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
+                                        {Array.from(Array(3)).map((_, c_index) => (
                                         <Col className="boxVerticals" style={{
                                             backgroundColor: 'Black',
                                         }}>
-                                            1
+                                            <TableComponent a={a} />
+                                                {a=a+1}
                                         </Col>
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            2
-                                        </Col>
-                                        <Col className="boxVerticals" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            3
-                                        </Col>
-
+                                        ))}
                                     </Row>
                                 ))}
                             </div>
                         </Item>
                         <Item>
-                            <div style={{ width: 150 }}>
-                                {Array.from(Array(3)).map((_, index) => (
+                        <div style={{ width: 150 }}>
+                                {Array.from(Array(3)).map((_, r_index) => (
                                     <Row>
-                                        <Col className="boxCorner" style={{
+                                        {Array.from(Array(3)).map((_, c_index) => (
+                                        <Col className="boxVerticals" style={{
                                             backgroundColor: 'Black',
                                         }}>
-                                            1
+                                            <TableComponent a={a} />
+                                                {a=a+1}
                                         </Col>
-                                        <Col className="boxCorner" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            2
-                                        </Col>
-                                        <Col className="boxCorner" style={{
-                                            backgroundColor: 'Black',
-                                        }}>
-                                            3
-                                        </Col>
-
+                                        ))}
                                     </Row>
                                 ))}
                             </div>
